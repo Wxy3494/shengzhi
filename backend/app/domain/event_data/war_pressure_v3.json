@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "weak_below": 20,
+  "weak_dimensions": 2,
+  "attack_on_refusal": true
+}

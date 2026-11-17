@@ -1,0 +1,102 @@
+{
+  "drought_local": {
+    "name": "久旱",
+    "announcement": "久旱已报至御前。",
+    "response_hint": "可用修渠修堤、赈济安置、减轻田赋回应。"
+  },
+  "flood_breach": {
+    "name": "河堤决口",
+    "announcement": "河堤决口已报至御前。",
+    "response_hint": "可用修渠修堤、赈济安置、减轻田赋回应。"
+  },
+  "earthquake_damage": {
+    "name": "地动屋毁",
+    "announcement": "地动屋毁已报至御前。",
+    "response_hint": "可用赈济安置、修渠修堤、减轻田赋回应。"
+  },
+  "locust_plague": {
+    "name": "蝗群食苗",
+    "announcement": "蝗群食苗已报至御前。",
+    "response_hint": "可用采买调粮、赈济安置、减轻田赋回应。"
+  },
+  "bumper_harvest": {
+    "name": "某郡丰收",
+    "announcement": "某郡丰收已报至御前。",
+    "response_hint": "可用采买调粮、整顿市场回应。"
+  },
+  "good_harvest": {
+    "name": "风调雨顺",
+    "announcement": "风调雨顺已报至御前。",
+    "response_hint": "本事已结，不需另行下诏。"
+  },
+  "trade_envoy": {
+    "name": "番邦请互市",
+    "announcement": "番邦请互市已报至御前。",
+    "response_hint": "可用开放通商、整顿市场、交涉议和回应。"
+  },
+  "tribute_mission": {
+    "name": "邻国来贡",
+    "announcement": "邻国来贡已报至御前。",
+    "response_hint": "本事已结，不需另行下诏。"
+  },
+  "border_raids": {
+    "name": "游牧侵扰",
+    "announcement": "游牧侵扰已报至御前。",
+    "response_hint": "可用加强边防、交涉议和、赈济安置回应。"
+  },
+  "foreign_incursion": {
+    "name": "邻军压境",
+    "announcement": "邻军压境已报至御前。",
+    "response_hint": "可用加强边防、交涉议和、采买调粮回应。"
+  },
+  "grain_price_spike": {
+    "name": "粮价腾贵",
+    "announcement": "粮价腾贵已报至御前。",
+    "response_hint": "可用采买调粮、整顿市场、减轻田赋、赈济安置回应。"
+  },
+  "refugee_pressure": {
+    "name": "灾民入城",
+    "announcement": "灾民入城已报至御前。",
+    "response_hint": "可用赈济安置、减轻田赋回应。"
+  },
+  "banditry_rises": {
+    "name": "匪患滋生",
+    "announcement": "匪患滋生已报至御前。",
+    "response_hint": "可用清查整顿、赈济安置、减轻田赋回应。"
+  },
+  "tax_collection_shortfall": {
+    "name": "赋税不继",
+    "announcement": "赋税不继已报至御前。",
+    "response_hint": "可用清查整顿、整顿市场、开放通商回应。"
+  },
+  "merchant_caravan": {
+    "name": "商路畅通",
+    "announcement": "商路畅通已报至御前。",
+    "response_hint": "本事已结，不需另行下诏。"
+  },
+  "craft_boom": {
+    "name": "手工业兴旺",
+    "announcement": "手工业兴旺已报至御前。",
+    "response_hint": "本事已结，不需另行下诏。"
+  },
+  "canal_obstruction": {
+    "name": "漕运受阻",
+    "announcement": "漕运受阻已报至御前。",
+    "response_hint": "可用修渠修堤、采买调粮、整顿市场回应。"
+  },
+  "corrupt_granary": {
+    "name": "仓吏侵吞",
+    "announcement": "仓吏侵吞已报至御前。",
+    "response_hint": "可用清查整顿、赈济安置、整顿市场回应。"
+  },
+  "scholar_petition": {
+    "name": "士绅请议新政",
+    "announcement": "士绅请议新政已报至御前。",
+    "response_hint": "可用清查整顿、咨议协商、减轻田赋回应。"
+  },
+  "peaceful_season": {
+    "name": "天下平稳",
+    "announcement": "天下平稳已报至御前。",
+    "response_hint": "本事已结，不需另行下诏。"
+  }
+}

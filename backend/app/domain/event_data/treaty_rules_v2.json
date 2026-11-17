@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "max_cities": 3,
+  "max_treasury": 30,
+  "max_grain": 30,
+  "fixture_terms": {"cities": 1, "treasury": 8, "grain": 6}
+}

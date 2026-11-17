@@ -1,0 +1,326 @@
+{
+  "$defs": {
+    "BenefitRule": {
+      "additionalProperties": false,
+      "properties": {
+        "tag": {
+          "title": "Tag",
+          "type": "string"
+        },
+        "effects": {
+          "$ref": "#/$defs/Effects"
+        }
+      },
+      "required": [
+        "tag",
+        "effects"
+      ],
+      "title": "BenefitRule",
+      "type": "object"
+    },
+    "Effects": {
+      "additionalProperties": false,
+      "properties": {
+        "people": {
+          "maximum": 10,
+          "minimum": -10,
+          "title": "People",
+          "type": "integer"
+        },
+        "treasury": {
+          "maximum": 10,
+          "minimum": -10,
+          "title": "Treasury",
+          "type": "integer"
+        },
+        "grain": {
+          "maximum": 10,
+          "minimum": -10,
+          "title": "Grain",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "people",
+        "treasury",
+        "grain"
+      ],
+      "title": "Effects",
+      "type": "object"
+    },
+    "HistoryWeight": {
+      "additionalProperties": false,
+      "properties": {
+        "tag": {
+          "title": "Tag",
+          "type": "string"
+        },
+        "present": {
+          "exclusiveMinimum": 0,
+          "maximum": 4,
+          "title": "Present",
+          "type": "number"
+        },
+        "absent": {
+          "default": 1.0,
+          "exclusiveMinimum": 0,
+          "maximum": 4,
+          "title": "Absent",
+          "type": "number"
+        },
+        "from_turn": {
+          "default": 1,
+          "maximum": 8,
+          "minimum": 1,
+          "title": "From Turn",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "tag",
+        "present"
+      ],
+      "title": "HistoryWeight",
+      "type": "object"
+    },
+    "ResourceWeight": {
+      "additionalProperties": false,
+      "properties": {
+        "resource": {
+          "enum": [
+            "grain",
+            "treasury",
+            "people"
+          ],
+          "title": "Resource",
+          "type": "string"
+        },
+        "below": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Below"
+        },
+        "above": {
+          "anyOf": [
+            {
+              "maximum": 100,
+              "minimum": 0,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Above"
+        },
+        "multiplier": {
+          "exclusiveMinimum": 0,
+          "maximum": 4,
+          "title": "Multiplier",
+          "type": "number"
+        }
+      },
+      "required": [
+        "resource",
+        "multiplier"
+      ],
+      "title": "ResourceWeight",
+      "type": "object"
+    },
+    "ResponseRule": {
+      "additionalProperties": false,
+      "properties": {
+        "requires_any": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Requires Any",
+          "type": "array"
+        },
+        "result": {
+          "enum": [
+            "well_handled",
+            "mitigated"
+          ],
+          "title": "Result",
+          "type": "string"
+        },
+        "effects": {
+          "$ref": "#/$defs/Effects"
+        },
+        "cost": {
+          "additionalProperties": {
+            "type": "integer"
+          },
+          "title": "Cost",
+          "type": "object"
+        }
+      },
+      "required": [
+        "requires_any",
+        "result",
+        "effects",
+        "cost"
+      ],
+      "title": "ResponseRule",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "title": "Id",
+      "type": "string"
+    },
+    "category": {
+      "enum": [
+        "disaster",
+        "harvest",
+        "diplomacy",
+        "border",
+        "social",
+        "finance",
+        "commerce",
+        "works",
+        "governance",
+        "politics",
+        "quiet"
+      ],
+      "title": "Category",
+      "type": "string"
+    },
+    "polarity": {
+      "enum": [
+        "negative",
+        "positive",
+        "opportunity",
+        "mixed",
+        "neutral"
+      ],
+      "title": "Polarity",
+      "type": "string"
+    },
+    "tier": {
+      "enum": [
+        "small",
+        "medium",
+        "major"
+      ],
+      "title": "Tier",
+      "type": "string"
+    },
+    "base_weight": {
+      "exclusiveMinimum": 0,
+      "maximum": 100,
+      "title": "Base Weight",
+      "type": "integer"
+    },
+    "turn_range": {
+      "items": {
+        "type": "integer"
+      },
+      "maxItems": 2,
+      "minItems": 2,
+      "title": "Turn Range",
+      "type": "array"
+    },
+    "narrative_key": {
+      "title": "Narrative Key",
+      "type": "string"
+    },
+    "immediate": {
+      "$ref": "#/$defs/Effects"
+    },
+    "class_effects": {
+      "additionalProperties": {
+        "type": "integer"
+      },
+      "title": "Class Effects",
+      "type": "object"
+    },
+    "pending": {
+      "title": "Pending",
+      "type": "boolean"
+    },
+    "unresolved": {
+      "$ref": "#/$defs/Effects"
+    },
+    "response_rules": {
+      "items": {
+        "$ref": "#/$defs/ResponseRule"
+      },
+      "title": "Response Rules",
+      "type": "array"
+    },
+    "protection": {
+      "anyOf": [
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "title": "Protection"
+    },
+    "season_multipliers": {
+      "additionalProperties": {
+        "type": "number"
+      },
+      "title": "Season Multipliers",
+      "type": "object"
+    },
+    "resource_weight": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/ResourceWeight"
+        },
+        {
+          "type": "null"
+        }
+      ],
+      "default": null
+    },
+    "history_weights": {
+      "items": {
+        "$ref": "#/$defs/HistoryWeight"
+      },
+      "title": "History Weights",
+      "type": "array"
+    },
+    "benefit_rules": {
+      "items": {
+        "$ref": "#/$defs/BenefitRule"
+      },
+      "title": "Benefit Rules",
+      "type": "array"
+    }
+  },
+  "required": [
+    "id",
+    "category",
+    "polarity",
+    "tier",
+    "base_weight",
+    "turn_range",
+    "narrative_key",
+    "immediate",
+    "class_effects",
+    "pending",
+    "unresolved",
+    "response_rules",
+    "protection"
+  ],
+  "title": "EventDefinition",
+  "type": "object"
+}

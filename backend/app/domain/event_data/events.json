@@ -1,0 +1,1202 @@
+{
+  "version": 3,
+  "events": [
+    {
+      "id": "drought_local",
+      "category": "disaster",
+      "polarity": "negative",
+      "tier": "medium",
+      "base_weight": 8,
+      "turn_range": [
+        2,
+        7
+      ],
+      "narrative_key": "drought_local",
+      "season_multipliers": {
+        "2": 1.25,
+        "3": 1.25
+      },
+      "resource_weight": {
+        "resource": "grain",
+        "below": 45,
+        "multiplier": 1.6
+      },
+      "history_weights": [],
+      "benefit_rules": [],
+      "immediate": {
+        "people": -1,
+        "treasury": 0,
+        "grain": -3
+      },
+      "class_effects": {
+        "commoners": -2
+      },
+      "pending": true,
+      "unresolved": {
+        "people": -3,
+        "treasury": 0,
+        "grain": -4
+      },
+      "response_rules": [
+        {
+          "requires_any": [
+            "waterworks",
+            "relief_reserves"
+          ],
+          "result": "well_handled",
+          "effects": {
+            "people": 3,
+            "treasury": -2,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 2
+          }
+        },
+        {
+          "requires_any": [
+            "tax_relief"
+          ],
+          "result": "mitigated",
+          "effects": {
+            "people": 1,
+            "treasury": -1,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 1
+          }
+        }
+      ],
+      "protection": "waterworks"
+    },
+    {
+      "id": "flood_breach",
+      "category": "disaster",
+      "polarity": "negative",
+      "tier": "medium",
+      "base_weight": 8,
+      "turn_range": [
+        2,
+        7
+      ],
+      "narrative_key": "flood_breach",
+      "season_multipliers": {
+        "2": 1.25,
+        "3": 1.25
+      },
+      "resource_weight": null,
+      "history_weights": [],
+      "benefit_rules": [],
+      "immediate": {
+        "people": -1,
+        "treasury": 0,
+        "grain": -3
+      },
+      "class_effects": {
+        "commoners": -2
+      },
+      "pending": true,
+      "unresolved": {
+        "people": -3,
+        "treasury": -3,
+        "grain": -4
+      },
+      "response_rules": [
+        {
+          "requires_any": [
+            "waterworks",
+            "relief_reserves"
+          ],
+          "result": "well_handled",
+          "effects": {
+            "people": 3,
+            "treasury": -2,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 2
+          }
+        },
+        {
+          "requires_any": [
+            "tax_relief"
+          ],
+          "result": "mitigated",
+          "effects": {
+            "people": 1,
+            "treasury": -1,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 1
+          }
+        }
+      ],
+      "protection": "waterworks"
+    },
+    {
+      "id": "earthquake_damage",
+      "category": "disaster",
+      "polarity": "negative",
+      "tier": "major",
+      "base_weight": 3,
+      "turn_range": [
+        3,
+        6
+      ],
+      "narrative_key": "earthquake_damage",
+      "season_multipliers": {},
+      "resource_weight": null,
+      "history_weights": [],
+      "benefit_rules": [],
+      "immediate": {
+        "people": -2,
+        "treasury": -4,
+        "grain": 0
+      },
+      "class_effects": {
+        "commoners": -2
+      },
+      "pending": true,
+      "unresolved": {
+        "people": -4,
+        "treasury": -3,
+        "grain": 0
+      },
+      "response_rules": [
+        {
+          "requires_any": [
+            "relief_reserves",
+            "waterworks"
+          ],
+          "result": "well_handled",
+          "effects": {
+            "people": 3,
+            "treasury": -2,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 2
+          }
+        },
+        {
+          "requires_any": [
+            "tax_relief"
+          ],
+          "result": "mitigated",
+          "effects": {
+            "people": 1,
+            "treasury": -1,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 1
+          }
+        }
+      ],
+      "protection": "relief_reserves"
+    },
+    {
+      "id": "locust_plague",
+      "category": "disaster",
+      "polarity": "negative",
+      "tier": "medium",
+      "base_weight": 6,
+      "turn_range": [
+        2,
+        7
+      ],
+      "narrative_key": "locust_plague",
+      "season_multipliers": {
+        "2": 1.25,
+        "3": 1.25
+      },
+      "resource_weight": {
+        "resource": "grain",
+        "below": 45,
+        "multiplier": 1.6
+      },
+      "history_weights": [],
+      "benefit_rules": [],
+      "immediate": {
+        "people": -1,
+        "treasury": 0,
+        "grain": -4
+      },
+      "class_effects": {
+        "commoners": -2
+      },
+      "pending": true,
+      "unresolved": {
+        "people": -3,
+        "treasury": 0,
+        "grain": -4
+      },
+      "response_rules": [
+        {
+          "requires_any": [
+            "grain_procurement",
+            "relief_reserves"
+          ],
+          "result": "well_handled",
+          "effects": {
+            "people": 3,
+            "treasury": -2,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 2
+          }
+        },
+        {
+          "requires_any": [
+            "tax_relief"
+          ],
+          "result": "mitigated",
+          "effects": {
+            "people": 1,
+            "treasury": -1,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 1
+          }
+        }
+      ],
+      "protection": "grain_procurement"
+    },
+    {
+      "id": "bumper_harvest",
+      "category": "harvest",
+      "polarity": "positive",
+      "tier": "medium",
+      "base_weight": 7,
+      "turn_range": [
+        2,
+        7
+      ],
+      "narrative_key": "bumper_harvest",
+      "season_multipliers": {},
+      "resource_weight": null,
+      "history_weights": [],
+      "benefit_rules": [
+        {
+          "tag": "market_opening",
+          "effects": {
+            "people": 0,
+            "treasury": 2,
+            "grain": 0
+          }
+        },
+        {
+          "tag": "heavy_trade_tax",
+          "effects": {
+            "people": 0,
+            "treasury": -3,
+            "grain": 0
+          }
+        }
+      ],
+      "immediate": {
+        "people": 2,
+        "treasury": 0,
+        "grain": 5
+      },
+      "class_effects": {
+        "commoners": 2
+      },
+      "pending": true,
+      "unresolved": {
+        "people": 0,
+        "treasury": 0,
+        "grain": 0
+      },
+      "response_rules": [
+        {
+          "requires_any": [
+            "grain_procurement",
+            "trade_regulation"
+          ],
+          "result": "well_handled",
+          "effects": {
+            "people": 1,
+            "treasury": 2,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 2
+          }
+        },
+        {
+          "requires_any": [],
+          "result": "mitigated",
+          "effects": {
+            "people": 1,
+            "treasury": -1,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 1
+          }
+        }
+      ],
+      "protection": null
+    },
+    {
+      "id": "good_harvest",
+      "category": "harvest",
+      "polarity": "positive",
+      "tier": "small",
+      "base_weight": 7,
+      "turn_range": [
+        1,
+        7
+      ],
+      "narrative_key": "good_harvest",
+      "season_multipliers": {},
+      "resource_weight": null,
+      "history_weights": [],
+      "benefit_rules": [],
+      "immediate": {
+        "people": 1,
+        "treasury": 0,
+        "grain": 3
+      },
+      "class_effects": {
+        "commoners": 2
+      },
+      "pending": false,
+      "unresolved": {
+        "people": 0,
+        "treasury": 0,
+        "grain": 0
+      },
+      "response_rules": [],
+      "protection": null
+    },
+    {
+      "id": "trade_envoy",
+      "category": "diplomacy",
+      "polarity": "opportunity",
+      "tier": "medium",
+      "base_weight": 7,
+      "turn_range": [
+        2,
+        7
+      ],
+      "narrative_key": "trade_envoy",
+      "season_multipliers": {},
+      "resource_weight": {
+        "resource": "treasury",
+        "above": 60,
+        "multiplier": 1.4
+      },
+      "history_weights": [
+        {
+          "tag": "market_opening",
+          "present": 1.4
+        }
+      ],
+      "benefit_rules": [
+        {
+          "tag": "market_opening",
+          "effects": {
+            "people": 0,
+            "treasury": 2,
+            "grain": 0
+          }
+        },
+        {
+          "tag": "heavy_trade_tax",
+          "effects": {
+            "people": 0,
+            "treasury": -3,
+            "grain": 0
+          }
+        }
+      ],
+      "immediate": {
+        "people": 0,
+        "treasury": 0,
+        "grain": 0
+      },
+      "class_effects": {},
+      "pending": true,
+      "unresolved": {
+        "people": 0,
+        "treasury": 0,
+        "grain": 0
+      },
+      "response_rules": [
+        {
+          "requires_any": [
+            "market_opening",
+            "trade_regulation"
+          ],
+          "result": "well_handled",
+          "effects": {
+            "people": 1,
+            "treasury": 5,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 2
+          }
+        },
+        {
+          "requires_any": [
+            "diplomacy"
+          ],
+          "result": "mitigated",
+          "effects": {
+            "people": 1,
+            "treasury": -1,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 1
+          }
+        }
+      ],
+      "protection": null
+    },
+    {
+      "id": "tribute_mission",
+      "category": "diplomacy",
+      "polarity": "positive",
+      "tier": "small",
+      "base_weight": 5,
+      "turn_range": [
+        2,
+        7
+      ],
+      "narrative_key": "tribute_mission",
+      "season_multipliers": {},
+      "resource_weight": null,
+      "history_weights": [],
+      "benefit_rules": [],
+      "immediate": {
+        "people": 1,
+        "treasury": 2,
+        "grain": 0
+      },
+      "class_effects": {},
+      "pending": false,
+      "unresolved": {
+        "people": 0,
+        "treasury": 0,
+        "grain": 0
+      },
+      "response_rules": [],
+      "protection": null
+    },
+    {
+      "id": "border_raids",
+      "category": "border",
+      "polarity": "negative",
+      "tier": "medium",
+      "base_weight": 7,
+      "turn_range": [
+        2,
+        7
+      ],
+      "narrative_key": "border_raids",
+      "season_multipliers": {},
+      "resource_weight": null,
+      "history_weights": [
+        {
+          "tag": "border_defense",
+          "present": 0.7,
+          "absent": 1.5,
+          "from_turn": 4
+        }
+      ],
+      "benefit_rules": [],
+      "immediate": {
+        "people": -1,
+        "treasury": 0,
+        "grain": -2
+      },
+      "class_effects": {
+        "borderArmy": -2
+      },
+      "pending": true,
+      "unresolved": {
+        "people": -3,
+        "treasury": -3,
+        "grain": 0
+      },
+      "response_rules": [
+        {
+          "requires_any": [
+            "border_defense",
+            "diplomacy"
+          ],
+          "result": "well_handled",
+          "effects": {
+            "people": 3,
+            "treasury": -2,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 2
+          }
+        },
+        {
+          "requires_any": [
+            "relief_reserves"
+          ],
+          "result": "mitigated",
+          "effects": {
+            "people": 1,
+            "treasury": -1,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 1
+          }
+        }
+      ],
+      "protection": "border_defense"
+    },
+    {
+      "id": "foreign_incursion",
+      "category": "border",
+      "polarity": "negative",
+      "tier": "major",
+      "base_weight": 3,
+      "turn_range": [
+        3,
+        6
+      ],
+      "narrative_key": "foreign_incursion",
+      "season_multipliers": {},
+      "resource_weight": null,
+      "history_weights": [
+        {
+          "tag": "border_defense",
+          "present": 0.7,
+          "absent": 1.5,
+          "from_turn": 4
+        }
+      ],
+      "benefit_rules": [],
+      "immediate": {
+        "people": -2,
+        "treasury": -3,
+        "grain": 0
+      },
+      "class_effects": {
+        "borderArmy": -2
+      },
+      "pending": true,
+      "unresolved": {
+        "people": -4,
+        "treasury": -4,
+        "grain": -2
+      },
+      "response_rules": [
+        {
+          "requires_any": [
+            "border_defense",
+            "diplomacy"
+          ],
+          "result": "well_handled",
+          "effects": {
+            "people": 3,
+            "treasury": -2,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 2
+          }
+        },
+        {
+          "requires_any": [
+            "grain_procurement"
+          ],
+          "result": "mitigated",
+          "effects": {
+            "people": 1,
+            "treasury": -1,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 1
+          }
+        }
+      ],
+      "protection": "border_defense"
+    },
+    {
+      "id": "grain_price_spike",
+      "category": "social",
+      "polarity": "negative",
+      "tier": "medium",
+      "base_weight": 6,
+      "turn_range": [
+        2,
+        7
+      ],
+      "narrative_key": "grain_price_spike",
+      "season_multipliers": {},
+      "resource_weight": {
+        "resource": "grain",
+        "below": 50,
+        "multiplier": 1.4
+      },
+      "history_weights": [],
+      "benefit_rules": [],
+      "immediate": {
+        "people": -2,
+        "treasury": 0,
+        "grain": 0
+      },
+      "class_effects": {
+        "commoners": -2
+      },
+      "pending": true,
+      "unresolved": {
+        "people": -3,
+        "treasury": 0,
+        "grain": -2
+      },
+      "response_rules": [
+        {
+          "requires_any": [
+            "grain_procurement",
+            "trade_regulation",
+            "tax_relief"
+          ],
+          "result": "well_handled",
+          "effects": {
+            "people": 3,
+            "treasury": -2,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 2
+          }
+        },
+        {
+          "requires_any": [
+            "relief_reserves"
+          ],
+          "result": "mitigated",
+          "effects": {
+            "people": 1,
+            "treasury": -1,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 1
+          }
+        }
+      ],
+      "protection": null
+    },
+    {
+      "id": "refugee_pressure",
+      "category": "social",
+      "polarity": "mixed",
+      "tier": "medium",
+      "base_weight": 5,
+      "turn_range": [
+        3,
+        7
+      ],
+      "narrative_key": "refugee_pressure",
+      "season_multipliers": {},
+      "resource_weight": null,
+      "history_weights": [],
+      "benefit_rules": [],
+      "immediate": {
+        "people": -1,
+        "treasury": -1,
+        "grain": 0
+      },
+      "class_effects": {
+        "commoners": -2
+      },
+      "pending": true,
+      "unresolved": {
+        "people": -3,
+        "treasury": 0,
+        "grain": 0
+      },
+      "response_rules": [
+        {
+          "requires_any": [
+            "relief_reserves"
+          ],
+          "result": "well_handled",
+          "effects": {
+            "people": 3,
+            "treasury": -2,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 2
+          }
+        },
+        {
+          "requires_any": [
+            "tax_relief"
+          ],
+          "result": "mitigated",
+          "effects": {
+            "people": 1,
+            "treasury": -1,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 1
+          }
+        }
+      ],
+      "protection": null
+    },
+    {
+      "id": "banditry_rises",
+      "category": "social",
+      "polarity": "negative",
+      "tier": "medium",
+      "base_weight": 5,
+      "turn_range": [
+        3,
+        7
+      ],
+      "narrative_key": "banditry_rises",
+      "season_multipliers": {},
+      "resource_weight": null,
+      "history_weights": [],
+      "benefit_rules": [],
+      "immediate": {
+        "people": -2,
+        "treasury": 0,
+        "grain": 0
+      },
+      "class_effects": {
+        "commoners": -2
+      },
+      "pending": true,
+      "unresolved": {
+        "people": -3,
+        "treasury": -2,
+        "grain": 0
+      },
+      "response_rules": [
+        {
+          "requires_any": [
+            "anti_corruption",
+            "relief_reserves"
+          ],
+          "result": "well_handled",
+          "effects": {
+            "people": 3,
+            "treasury": -2,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 2
+          }
+        },
+        {
+          "requires_any": [
+            "tax_relief"
+          ],
+          "result": "mitigated",
+          "effects": {
+            "people": 1,
+            "treasury": -1,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 1
+          }
+        }
+      ],
+      "protection": null
+    },
+    {
+      "id": "tax_collection_shortfall",
+      "category": "finance",
+      "polarity": "negative",
+      "tier": "small",
+      "base_weight": 5,
+      "turn_range": [
+        2,
+        7
+      ],
+      "narrative_key": "tax_collection_shortfall",
+      "season_multipliers": {},
+      "resource_weight": {
+        "resource": "treasury",
+        "below": 48,
+        "multiplier": 1.4
+      },
+      "history_weights": [
+        {
+          "tag": "tax_relief",
+          "present": 1.3
+        }
+      ],
+      "benefit_rules": [],
+      "immediate": {
+        "people": 0,
+        "treasury": -3,
+        "grain": 0
+      },
+      "class_effects": {},
+      "pending": true,
+      "unresolved": {
+        "people": 0,
+        "treasury": -2,
+        "grain": 0
+      },
+      "response_rules": [
+        {
+          "requires_any": [
+            "anti_corruption",
+            "trade_regulation"
+          ],
+          "result": "well_handled",
+          "effects": {
+            "people": 1,
+            "treasury": 2,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 2
+          }
+        },
+        {
+          "requires_any": [
+            "market_opening"
+          ],
+          "result": "mitigated",
+          "effects": {
+            "people": 1,
+            "treasury": -1,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 1
+          }
+        }
+      ],
+      "protection": null
+    },
+    {
+      "id": "merchant_caravan",
+      "category": "commerce",
+      "polarity": "positive",
+      "tier": "small",
+      "base_weight": 6,
+      "turn_range": [
+        2,
+        7
+      ],
+      "narrative_key": "merchant_caravan",
+      "season_multipliers": {},
+      "resource_weight": null,
+      "history_weights": [],
+      "benefit_rules": [
+        {
+          "tag": "market_opening",
+          "effects": {
+            "people": 0,
+            "treasury": 2,
+            "grain": 0
+          }
+        },
+        {
+          "tag": "heavy_trade_tax",
+          "effects": {
+            "people": 0,
+            "treasury": -3,
+            "grain": 0
+          }
+        }
+      ],
+      "immediate": {
+        "people": 1,
+        "treasury": 3,
+        "grain": 0
+      },
+      "class_effects": {
+        "merchants": 2
+      },
+      "pending": false,
+      "unresolved": {
+        "people": 0,
+        "treasury": 0,
+        "grain": 0
+      },
+      "response_rules": [],
+      "protection": null
+    },
+    {
+      "id": "craft_boom",
+      "category": "commerce",
+      "polarity": "positive",
+      "tier": "medium",
+      "base_weight": 4,
+      "turn_range": [
+        3,
+        7
+      ],
+      "narrative_key": "craft_boom",
+      "season_multipliers": {},
+      "resource_weight": null,
+      "history_weights": [],
+      "benefit_rules": [
+        {
+          "tag": "market_opening",
+          "effects": {
+            "people": 0,
+            "treasury": 2,
+            "grain": 0
+          }
+        },
+        {
+          "tag": "heavy_trade_tax",
+          "effects": {
+            "people": 0,
+            "treasury": -3,
+            "grain": 0
+          }
+        }
+      ],
+      "immediate": {
+        "people": 1,
+        "treasury": 4,
+        "grain": 0
+      },
+      "class_effects": {
+        "merchants": 2
+      },
+      "pending": false,
+      "unresolved": {
+        "people": 0,
+        "treasury": 0,
+        "grain": 0
+      },
+      "response_rules": [],
+      "protection": null
+    },
+    {
+      "id": "canal_obstruction",
+      "category": "works",
+      "polarity": "negative",
+      "tier": "medium",
+      "base_weight": 5,
+      "turn_range": [
+        2,
+        7
+      ],
+      "narrative_key": "canal_obstruction",
+      "season_multipliers": {},
+      "resource_weight": null,
+      "history_weights": [],
+      "benefit_rules": [],
+      "immediate": {
+        "people": 0,
+        "treasury": -1,
+        "grain": -2
+      },
+      "class_effects": {},
+      "pending": true,
+      "unresolved": {
+        "people": -2,
+        "treasury": 0,
+        "grain": -3
+      },
+      "response_rules": [
+        {
+          "requires_any": [
+            "waterworks",
+            "grain_procurement"
+          ],
+          "result": "well_handled",
+          "effects": {
+            "people": 3,
+            "treasury": -2,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 2
+          }
+        },
+        {
+          "requires_any": [
+            "trade_regulation"
+          ],
+          "result": "mitigated",
+          "effects": {
+            "people": 1,
+            "treasury": -1,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 1
+          }
+        }
+      ],
+      "protection": "waterworks"
+    },
+    {
+      "id": "corrupt_granary",
+      "category": "governance",
+      "polarity": "negative",
+      "tier": "medium",
+      "base_weight": 4,
+      "turn_range": [
+        2,
+        7
+      ],
+      "narrative_key": "corrupt_granary",
+      "season_multipliers": {},
+      "resource_weight": null,
+      "history_weights": [],
+      "benefit_rules": [],
+      "immediate": {
+        "people": -1,
+        "treasury": 0,
+        "grain": -2
+      },
+      "class_effects": {},
+      "pending": true,
+      "unresolved": {
+        "people": -3,
+        "treasury": 0,
+        "grain": -3
+      },
+      "response_rules": [
+        {
+          "requires_any": [
+            "anti_corruption",
+            "relief_reserves"
+          ],
+          "result": "well_handled",
+          "effects": {
+            "people": 3,
+            "treasury": -2,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 2
+          }
+        },
+        {
+          "requires_any": [
+            "trade_regulation"
+          ],
+          "result": "mitigated",
+          "effects": {
+            "people": 1,
+            "treasury": -1,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 1
+          }
+        }
+      ],
+      "protection": null
+    },
+    {
+      "id": "scholar_petition",
+      "category": "politics",
+      "polarity": "opportunity",
+      "tier": "small",
+      "base_weight": 5,
+      "turn_range": [
+        2,
+        7
+      ],
+      "narrative_key": "scholar_petition",
+      "season_multipliers": {},
+      "resource_weight": null,
+      "history_weights": [],
+      "benefit_rules": [],
+      "immediate": {
+        "people": 0,
+        "treasury": 0,
+        "grain": 0
+      },
+      "class_effects": {
+        "gentry": -1
+      },
+      "pending": true,
+      "unresolved": {
+        "people": 0,
+        "treasury": 0,
+        "grain": 0
+      },
+      "response_rules": [
+        {
+          "requires_any": [
+            "anti_corruption",
+            "consultation"
+          ],
+          "result": "well_handled",
+          "effects": {
+            "people": 1,
+            "treasury": 2,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 2
+          }
+        },
+        {
+          "requires_any": [
+            "tax_relief"
+          ],
+          "result": "mitigated",
+          "effects": {
+            "people": 1,
+            "treasury": -1,
+            "grain": 0
+          },
+          "cost": {
+            "treasury": 1
+          }
+        }
+      ],
+      "protection": null
+    },
+    {
+      "id": "peaceful_season",
+      "category": "quiet",
+      "polarity": "neutral",
+      "tier": "small",
+      "base_weight": 1,
+      "turn_range": [
+        1,
+        8
+      ],
+      "narrative_key": "peaceful_season",
+      "season_multipliers": {},
+      "resource_weight": null,
+      "history_weights": [],
+      "benefit_rules": [],
+      "immediate": {
+        "people": 0,
+        "treasury": 0,
+        "grain": 0
+      },
+      "class_effects": {},
+      "pending": false,
+      "unresolved": {
+        "people": 0,
+        "treasury": 0,
+        "grain": 0
+      },
+      "response_rules": [],
+      "protection": null
+    }
+  ]
+}

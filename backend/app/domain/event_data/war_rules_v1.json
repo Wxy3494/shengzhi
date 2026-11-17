@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "cost": {"treasury": [14, 20], "grain": [12, 18]},
+  "chance": {"base": 15, "people": 0.25, "treasury": 0.3, "grain": 0.3, "min": 10, "max": 90},
+  "victory_people": [5, 8],
+  "victory_returns": {"treasury": [0, 28], "grain": [0, 26]},
+  "defeat_people": [-10, -6],
+  "defeat_extra": {"treasury": [2, 5], "grain": [2, 5]},
+  "cession_chance": 65,
+  "collapse": {"resource_below": 25, "cessions_at_least": 3, "chance": 30}
+}

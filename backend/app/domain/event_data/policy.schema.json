@@ -1,0 +1,90 @@
+{
+  "$defs": {
+    "Effects": {
+      "additionalProperties": false,
+      "properties": {
+        "people": {
+          "maximum": 10,
+          "minimum": -10,
+          "title": "People",
+          "type": "integer"
+        },
+        "treasury": {
+          "maximum": 10,
+          "minimum": -10,
+          "title": "Treasury",
+          "type": "integer"
+        },
+        "grain": {
+          "maximum": 10,
+          "minimum": -10,
+          "title": "Grain",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "people",
+        "treasury",
+        "grain"
+      ],
+      "title": "Effects",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "const": 3,
+      "title": "Version",
+      "type": "integer"
+    },
+    "effects": {
+      "additionalProperties": {
+        "$ref": "#/$defs/Effects"
+      },
+      "title": "Effects",
+      "type": "object"
+    },
+    "tax": {
+      "additionalProperties": {
+        "items": {
+          "type": "integer"
+        },
+        "type": "array"
+      },
+      "title": "Tax",
+      "type": "object"
+    },
+    "echo": {
+      "$ref": "#/$defs/Effects"
+    },
+    "coercive": {
+      "$ref": "#/$defs/Effects"
+    },
+    "pardon": {
+      "$ref": "#/$defs/Effects"
+    },
+    "pardon_risk_echo": {
+      "$ref": "#/$defs/Effects"
+    },
+    "inaction_echo": {
+      "$ref": "#/$defs/Effects"
+    },
+    "harmful_echo": {
+      "$ref": "#/$defs/Effects"
+    }
+  },
+  "required": [
+    "version",
+    "effects",
+    "tax",
+    "echo",
+    "coercive",
+    "pardon",
+    "pardon_risk_echo",
+    "inaction_echo",
+    "harmful_echo"
+  ],
+  "title": "PolicyCatalog",
+  "type": "object"
+}

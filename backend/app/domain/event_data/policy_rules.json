@@ -1,0 +1,167 @@
+{
+  "version": 3,
+  "effects": {
+    "water": {
+      "people": 6,
+      "treasury": -7,
+      "grain": -1
+    },
+    "dike": {
+      "people": 6,
+      "treasury": -7,
+      "grain": -1
+    },
+    "relief": {
+      "people": 6,
+      "treasury": -2,
+      "grain": -6
+    },
+    "grain_supply": {
+      "people": 3,
+      "treasury": -6,
+      "grain": 10
+    },
+    "road": {
+      "people": 5,
+      "treasury": -5,
+      "grain": -1
+    },
+    "trade": {
+      "people": 5,
+      "treasury": 5,
+      "grain": -1
+    },
+    "justice": {
+      "people": 5,
+      "treasury": 3,
+      "grain": 0
+    },
+    "administration": {
+      "people": 5,
+      "treasury": 3,
+      "grain": 0
+    },
+    "oversight": {
+      "people": 4,
+      "treasury": 2,
+      "grain": 0
+    },
+    "military": {
+      "people": 4,
+      "treasury": -5,
+      "grain": -4
+    },
+    "defense": {
+      "people": 4,
+      "treasury": -5,
+      "grain": -4
+    },
+    "diplomacy": {
+      "people": 4,
+      "treasury": -2,
+      "grain": 0
+    },
+    "education": {
+      "people": 5,
+      "treasury": -4,
+      "grain": 0
+    },
+    "reform": {
+      "people": 5,
+      "treasury": -4,
+      "grain": 0
+    },
+    "finance": {
+      "people": 2,
+      "treasury": 7,
+      "grain": 0
+    },
+    "other": {
+      "people": 0,
+      "treasury": 0,
+      "grain": 0
+    },
+    "inaction": {
+      "people": 0,
+      "treasury": 0,
+      "grain": 0
+    },
+    "rest": {
+      "people": 4,
+      "treasury": -2,
+      "grain": 1
+    },
+    "repression": {
+      "people": -8,
+      "treasury": 3,
+      "grain": 0
+    },
+    "coercive": {
+      "people": -7,
+      "treasury": -6,
+      "grain": -5
+    }
+  },
+  "tax": {
+    "moderate": [
+      5,
+      -4,
+      0
+    ],
+    "half": [
+      6,
+      -6,
+      0
+    ],
+    "full": [
+      7,
+      -9,
+      0
+    ],
+    "restore": [
+      -1,
+      7,
+      0
+    ],
+    "unchanged": [
+      1,
+      2,
+      0
+    ],
+    "unspecified": [
+      -3,
+      9,
+      0
+    ]
+  },
+  "echo": {
+    "people": 1,
+    "treasury": 0,
+    "grain": 0
+  },
+  "coercive": {
+    "people": -7,
+    "treasury": -6,
+    "grain": -5
+  },
+  "pardon": {
+    "people": 3,
+    "treasury": -2,
+    "grain": 0
+  },
+  "pardon_risk_echo": {
+    "people": -2,
+    "treasury": 0,
+    "grain": 0
+  },
+  "inaction_echo": {
+    "people": 0,
+    "treasury": 0,
+    "grain": 0
+  },
+  "harmful_echo": {
+    "people": -1,
+    "treasury": 0,
+    "grain": 0
+  }
+}
